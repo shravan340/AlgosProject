@@ -15,7 +15,8 @@ def quickSort(numbers):
         if(numbers[1]>numbers[0]):
             return numbers
         else:
-            return list([numbers[1],numbers[0]])
+            temp=[numbers[1],numbers[0]]
+            return temp
     else:
         key = numbers[0]
         for i in range(1,size):
@@ -26,7 +27,7 @@ def quickSort(numbers):
         left.append(key)
     return quickSort(left) + quickSort(right)
 
-content = [line.rstrip('\t') for line in open('1.txt')]
+content = [line.rstrip('\t') for line in open('input.txt')]
 k,n=content[0].split()
 k=int(k)
 n=int(n)
@@ -46,7 +47,7 @@ else:
         list.append(i)
     ans= quickSort(list)  
     topk= ans[n-k:]
-    with open ("output.txt","w")as fp:
+    with open ("outputfirstelementquicksort.txt","w")as fp:
         fp.write("the %d th smallest element in array is %d\n"%(k, ans[k-1]))
         fp.write("the %d top elements are:\n"%k)
         for line in reversed(topk):

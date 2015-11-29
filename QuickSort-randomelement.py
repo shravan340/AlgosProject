@@ -1,8 +1,9 @@
-import random
 
 __author__ = 'Munna'
 
 import sys
+import random
+
 def quickSortUsingRandomPivot(numbers):
     left = []
     right = []
@@ -15,7 +16,8 @@ def quickSortUsingRandomPivot(numbers):
         if (numbers[1] > numbers[0]):
             return numbers
         else:
-            return reversed(numbers)
+            temp=[numbers[1],numbers[0]]
+            return temp
     else:
         if((size-1)!=0):
             num = random.randint(0, size-1)
@@ -28,7 +30,7 @@ def quickSortUsingRandomPivot(numbers):
     return quickSortUsingRandomPivot(left) + quickSortUsingRandomPivot(right)
 
 
-content = [line.rstrip('\t') for line in open('1.txt')]
+content = [line.rstrip('\t') for line in open('input.txt')]
 k,n=content[0].split()
 k=int(k)
 n=int(n)
@@ -48,7 +50,7 @@ else:
         list.append(i)
     ans = quickSortUsingRandomPivot(list)
     topk = ans[n-k:]
-    with open("output.txt","w")as fp:
+    with open("outputrandomelementquicksort.txt","w")as fp:
         fp.write("Using Quick Sort Random Element as pivot:\n")
         fp.write("%d th smallest element in array is %d\n"%(k, ans[k-1]))
         fp.write("%d top elements are:\n"%k)
