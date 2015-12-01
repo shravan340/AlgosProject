@@ -1,3 +1,4 @@
+__author__ = 'Munna'
 import random
 import sys
 import time
@@ -6,26 +7,10 @@ def getPivotIndex(start, end):
 
 
 def Quicksort(start, end):
-    if start < end:
-        if (end - start) < Threshold_Insertion_Sort:
-            Insertion_Sort(start, end)
-        else:
+        if start < end:
             pivotIndex = partition(start, end, getPivotIndex(start, end))
             Quicksort(start, pivotIndex - 1)
             Quicksort(pivotIndex + 1, end)
-
-
-def Insertion_Sort(start, end):
-    val = 0
-    for i in range(start + 1, end + 1, 1):
-        val = list[i]
-        j = i - 1
-        while j >= start and list[j] > val:
-            list[j + 1] = list[j]
-            j -= 1
-        list[j + 1] = val
-
-
 
 def partition(start, end, pivotIndex):
     pivotIndexAfterPartition = start
@@ -45,7 +30,6 @@ def swap(i, j):
     list[j] = temp
 
 
-Threshold_Insertion_Sort = 10
 content = [line.rstrip('\t') for line in open('input.txt')]
 k,n=content[0].split()
 k=int(k)
@@ -71,7 +55,7 @@ else:
     t2=time.time()
     print (t2-t1)
     topk= list[n-k:]
-    with open ("output_QuickSort_with_Insertionsort.txt","w")as fp:
+    with open ("Output_QuickSort_RandomElement.txt","w")as fp:
         fp.write("the %d th smallest element in array is %d\n"%(k, list[k-1]))
         fp.write("the %d top elements are:\n"%k)
         for line in reversed(topk):

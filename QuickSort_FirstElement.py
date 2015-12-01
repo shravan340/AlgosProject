@@ -51,7 +51,7 @@ else:
     t2=time.time()
     print (t2-t1)
     topk= ans[n-k:]
-    with open ("outputfirstelementquicksort.txt","w")as fp:
+    with open ("Output_QuickSort_FirstElement.txt","w")as fp:
         fp.write("the %d th smallest element in array is %d\n"%(k, ans[k-1]))
         fp.write("the %d top elements are:\n"%k)
         for line in reversed(topk):
