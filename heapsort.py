@@ -1,5 +1,6 @@
 
 import sys
+import time
 def Max_Heapify(array, i):
     l = 2*i+1
     r = 2*i+2
@@ -55,8 +56,10 @@ else:
         i=i.strip()
         i=int(i)
         list.append(i)
+    t1=time.time()
     Heap_Sort(list)
-    print (list)
+    t2=time.time()
+    print (t2-t1)
     topk= list[n-k:]
     with open ("outputheapsort.txt","w")as fp:
         fp.write("the %d th smallest element in array is %d\n"%(k, list[k-1]))

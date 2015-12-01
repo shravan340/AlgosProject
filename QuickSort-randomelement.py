@@ -3,7 +3,7 @@ __author__ = 'Munna'
 
 import sys
 import random
-
+sys.setrecursionlimit(10000)
 def quickSortUsingRandomPivot(numbers):
     left = []
     right = []
@@ -19,8 +19,7 @@ def quickSortUsingRandomPivot(numbers):
             temp=[numbers[1],numbers[0]]
             return temp
     else:
-        if((size-1)!=0):
-            num = random.randint(0, size-1)
+        num = random.randint(0,size-1)
         pivot = numbers[num]
         for i in range(0, size):
             if numbers[i] <= pivot:
@@ -46,7 +45,7 @@ else:
             j += 1
             continue
         i=i.strip()
-        i=int(i)
+        i=float(i)
         list.append(i)
     ans = quickSortUsingRandomPivot(list)
     topk = ans[n-k:]

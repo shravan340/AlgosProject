@@ -5,6 +5,7 @@ Created on Sun Nov 22 18:45:55 2015
 @author: vineet
 """
 import sys
+import time
 def quickSort(numbers):
     left = []
     right = []
@@ -45,7 +46,10 @@ else:
         i=i.strip()
         i=int(i)
         list.append(i)
+    t1=time.time()
     ans= quickSort(list)  
+    t2=time.time()
+    print (t2-t1)
     topk= ans[n-k:]
     with open ("outputfirstelementquicksort.txt","w")as fp:
         fp.write("the %d th smallest element in array is %d\n"%(k, ans[k-1]))
@@ -55,6 +59,3 @@ else:
         fp.write("the ascending order for the array is:\n")
         for line in ans:
             fp.write(str(line)+"\n")
-
-
-  
