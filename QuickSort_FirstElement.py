@@ -28,7 +28,7 @@ def quickSort(numbers):
         left.append(key)
     return quickSort(left) + quickSort(right)
 
-content = [line.rstrip('\t') for line in open('input.txt')]
+content = [line.rstrip('\t') for line in open('Input_1K.txt')]
 k,n=content[0].split()
 k=int(k)
 n=int(n)

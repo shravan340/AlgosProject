@@ -46,7 +46,7 @@ def swap(i, j):
     list[j] = temp
 
 
-content = [line.rstrip('\t') for line in open('input.txt')]
+content = [line.rstrip('\t') for line in open('Input.txt')]
 k,n=content[0].split()
 k=int(k)
 n=int(n)

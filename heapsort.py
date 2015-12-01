@@ -38,7 +38,7 @@ def Return_Max(array):
 
 #a = [2, 7, 3, 9, 1, 4, 8, 6, 5, 0]
 heap_size = None
-content = [line.rstrip('\t') for line in open('input.txt')]
+content = [line.rstrip('\t') for line in open('Input.txt')]
 k,n=content[0].split()
 k=int(k)
 n=int(n)
