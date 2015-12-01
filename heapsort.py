@@ -56,9 +56,9 @@ else:
         i=int(i)
         list.append(i)
     Heap_Sort(list)
-    print list
+    print (list)
     topk= list[n-k:]
-    with open ("output.txt","w")as fp:
+    with open ("outputheapsort.txt","w")as fp:
         fp.write("the %d th smallest element in array is %d\n"%(k, list[k-1]))
         fp.write("the %d top elements are:\n"%k)
         for line in reversed(topk):
