@@ -38,7 +38,7 @@ def Return_Max(array):
 
 #a = [2, 7, 3, 9, 1, 4, 8, 6, 5, 0]
 heap_size = None
-content = [line.rstrip('\t') for line in open('Input.txt')]
+content = [line.rstrip('\t') for line in open('Input_5.txt')]
 k,n=content[0].split()
 k=int(k)
 n=int(n)
@@ -54,7 +54,7 @@ else:
             j+=1
             continue
         i=i.strip()
-        i=int(i)
+        i=float(i)
         list.append(i)
     t1=time.time()
     Heap_Sort(list)
@@ -62,7 +62,7 @@ else:
     print (t2-t1)
     topk= list[n-k:]
     with open ("Output_HeapSort.txt","w")as fp:
-        fp.write("the %d th smallest element in array is %d\n"%(k, list[k-1]))
+        fp.write("the %d th smallest element in array is %f\n"%(k, list[k-1]))
         fp.write("the %d top elements are:\n"%k)
         for line in reversed(topk):
             fp.write(str(line)+"\n")
