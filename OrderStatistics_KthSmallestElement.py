@@ -9,8 +9,8 @@ def kthsmallest(arr,l,r,k):
     if k > 0 and k <= r-l +1:
         n=r-l+1
         median=[0 for x in range((n+4)//5)]
-        number=[]
-        num=[]
+        #number=[]
+        #num=[]
         temp=int(n/5)
         i=0
         for i in range (temp):
