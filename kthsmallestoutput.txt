@@ -1,0 +1,2 @@
+Kth Smallest element:
+2

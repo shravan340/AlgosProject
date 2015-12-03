@@ -1,0 +1,2 @@
+The 1th smallest element:
+1
